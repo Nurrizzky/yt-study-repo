@@ -1,0 +1,341 @@
+TailwindCSS
+
+🙌part 1 - 3 ( lebih baik lihat dokumentasi tailwindCSS )
+:
+
+CSS yang ada > (lebih besar dari) disebut dengan child-combinator
+Bahasanya gini Css tolong carikan saya img yang merupkan turunan langsung dari (nama kelas)
+
+	npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch  -> jalanin lagi
+
+npm run dev -> hasil dari ganti perintah di pacage.json
+
+kalau bikin project dengan tailwindcss dan sudah final atau selesai. kita bisa memperkecil file css nya dengan cara menjalankan 1 perintah 👇:
+
+	👉 npx tailwindcss -o ./public/css/final.css --minify
+
+setelah perintah 👆 ini dijalankan, jangan lupa pindahkan link style dari index.html nya ke 👉 final.css
+
+maka file yang di loudnya lebih kecil lagi.
+
+🙌 part 4 ( lebih baik lihat dokumentasi tailwindCSS )
+:
+
+koreksi : 
+
+urutan instal tailwindcss pada project baru : 
+1. npm init -y
+2. npm i tailwindcss
+3. jalankan perintah npx tailwindcss init
+4. atur tailwind.config.js --> content --> ./index.html  --> save
+5. bikin file tailwind.css yang di pasang --> @tailwind base;
+					      @tailwind components;
+					      @tailwind utilities;
+6. bikin key di package.json dibawah "test": dengan membuah key "dev": "tailwindcss -i ./tailwind.css - o ./style.css --watch
+7. jalankan perintah -->  npm run dev | untuk menjalankan code.
+8. sambungkan html dengan style.css
+selesai.
+
+ternyata dengan menggunakan cdnjs pun kita bisa menggunakan auto complite nya dengan cara :
+1. salin script di web tailwind CSS yang ada di bagian PLAY CDN 
+2. simpan di bagian head pada html
+3. tambahkan file dengan nama --> tailwind.config.js (kosongkan saja) --> maka fitur auto complite bisa di gunakan 
+
+maka untuk ke depannya akan menggunakan CDN untuk pembelajaran karena sekarang kita tidak akan pedulikan dulu optimasi web kita.
+
+4 ==> 1rem  misal ingin marginnya 32px maka m-8 ==> 4 x 8 = 32. 🔥
+1 ==> 0,25
+2 ==> 0,5
+
+kalo misal ml-8 (margin-left = 32px) akan berjalan normal saja. 
+tapi kalau -ml-8 maka, margin-leftnya : ==> -32px
+
+💌untuk font kita bisa kostum sendiri caranya : 
+1. cari fontnya lalu copy link nya semacam CDN ke html di bagian head.
+2. custum di tailwind.config pada bagian extend
+3. ketik ==>
+		fontFamily: { 
+
+			pop: ['Poppins']
+	
+		},
+4. cara pakainya ketik di class dengan ==> "font-pop".
+selesai.
+
+💌untuk kostumisasi warna dan spicing mirip dengan kustom fontFamily.
+
+💌kita bisa menambahkan background gradient dengan menulis bg-gradient-to-br(br==>bottom right dan bnyak lainnya) from (warna dari bottom) to(ke bawah kanan) 
+contoh nya :
+
+	"bg-gradient-to-br from-indigo-300 to-yellow-300"
+
+kita bisa menambahkan warna nya di tengah antara form dan to dengan via, contohnya :
+
+	"bg-gradient-to-br from-indigo-300 via-red-300 to-yellow-300"
+
+kita juga bisa menerapkan gradient ini ke text dengan cara menambahkan :
+bg-clip-text 
+text-transparent --> agar warna gradiennya muncul
+contoh penulisan codenya :
+
+	"bg-gradient-to-br from-blue-600 to-tesl-300 bg-clip-text text-transparent"
+
+selesaii.
+
+🙌 part 5 ( lebih baik lihat dokumentasi tailwindCSS )
+:
+
+kita bisa memasukan nilai sembarang pada class jika nilai sembarang ini hanya digunakan beberapa kali saja. jadi tidak perlu membuat kostum di extendnya
+contohnya : 
+
+	"mx-[42px]" ==> margin X atau kanan kiri itu 42px karena original tailwind tidak memberikan 42px.
+
+begitupun dengan warna, contohnya :
+
+	"bg-[#FFF]" ==> pasang #hex code pada kurung siku.
+
+💌kita bisa menambahkan overvlow hidden, scroll dan fixed pada text yang menimpa gambar yang textnya terlalu banyak.
+
+overflow-y-scroll bg-local ==> ini membuat saat di scroll ke bawah gambarnya me-looping sesuali dengan text nya / ngescroll bersama textnya
+
+overflow-y-scroll bg-fixed ==> ini membuat background ke scroll saat kita scroll halaman utama. --> background tidak ter-scroll saat kita meng scroll text yang ada di depan gambarnya
+
+bg-auto ==> akan secara otomatis menyerupai ukuran gambarnya sendiri / default.
+bg-cover ==> akan meng-scan gambar dan akan secara paksa mengikuti bentuk dari parentnya memenuhi(mungkin akan di scale / scrach.
+bg-contain ==> akan melakukan scale terhadap background dan akan memenuhi salah satu sisi dari elemennya(tidak melakukan cover atau strach).
+
+kalau tidak ingin ada repeat ==> bg-no-repeat ---> kalau kita ingin meletakan gambar nya di bawah ==> bg-bottom dan lainnya.
+
+Rounded ==>  akan memunculkan border radius / tumpul, penulisan ==> "rounded".
+💌👆bisa diberi nilai seperti margin dan padding rounded untuk satuan ---> rounded-b/t (2 bottom), rounded-br/bl/tr/tl(1 bottom right).
+
+bagian border bisa menggunakan devide saat elemennya lebih dari 1
+
+Efek ( lebih baik lihat dokumentasi tailwindCSS )
+
+1. box-shadow  ==> "shadow-(ukurannya - sm, lg, xl)" "shadow-(color)".
+2. opacity ==> "opacity-0"
+3. mix blend mode ==> element yang di depannya ngeblend dengan gambar yang di belakang
+4. bg blend mode ==> bg-color ngebelnd - bg-img
+
+blur ==> untuk blur kita harus membuat elemnnya sedikit transparan lalu gunakan backdrop-blur-sm.
+untuk bg-white diubah jadi transparan ==> bg-white/30
+
+
+🙌 Part 6 :
+
+psuedo class :
+
+"hover: (tulis apa yang mau terjadi)" ==> untuk hover ini hanya bisa sekali pakai dalam satu element contoh ---> hover pertama di element a untuk mengubah warna bg maka hover ke dua untuk mengubah border-radius nya.
+
+💌Group pada hover: ===> contoh kita mempunyai card yang memiliki h5 dan p kita ingin saat cardnya di hover bg- nya jadi warna biru dan textnya jadi warna putih maka untuk bg dari card nya bisa langsung menggunakan psuedo-class hover. tapi untuk mengubah text di dalam card nya kita menggunakan group. 
+contohnya :
+
+<div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto shadow-md font-pop p-5 hover:bg-sky-500 group">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white">heading 5</h5>
+        <p class="text-slate-600 group-hover:text-white">paragraf</p>
+<div>
+
+higlighted text (saat text d block) :
+
+kita bisa mengganti perilaku saat kita sorot textnya atau block textnya
+contoh codenya :
+
+	"selection:bg-lime-300 selection:text-slate-900"
+
+==> output yang akan keluar saat kita block text nya maka bg dari blocknya itu bewarna lime dan textnya berubah menjadi slate-900
+
+fist-line and first letter : 
+
+contoh kodenya :
+
+	first-line:uppercase
+        first-line:tracking-widest
+        first-letter:text-7xl
+        first-letter:float-left 
+        first-letter:mr-3"
+
+
+==> baris pertama ---> akan mengerluarkan output pada baris pertama paragraf semua huruf akan besar semua.
+==> baris kedua ---> akan merenggangkan text antar huruf nya pada baris pertama paragraf (widnest yang paling lebar).
+==> baris ketiga ---> akan memperbesar huruf pertama pada peragraf.
+==> baris keempat ---> akan membuat huruf pertama pada paragraf menjadi float left(agar lebih rapih).
+==> baris kelima ---> memberi jarak ke kanan dari paragraf agar tidak mepet(biar rapih).
+
+placeholder :
+--> untuk memberi style pada placeholder kita bisa menulis code nya kira kira seperti ini :
+	"placeholder:text-slate-400"
+
+💌💌psuedo-elment :
+after --> penulisnnya kurang lebih seperti ini (lebih jelas lihat dokumentasinya) :
+
+	"after:content-['*'] after:text-pink-500 after:ml-0.5".
+
+💌💌invalid (pada input) :
+kurang lebih seperti ini penulisan codenya :
+
+	"invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700" 
+
+-- invalid pertama ==> misal type dari inputannya adalah email maka pada saat user hanya menulis rizky saja tulisan itu akan bewarna pink tapi jika tulisannya menjadi rizky@gmail.com maka akan berubah menjadi hitam tau sudah tidak invalid.
+--invalid:focus ke-2 ==> pada saat inputannya salah maka ring nya akan bewarna pink.
+--invalid:focus ke-3 ==> sama logikanya seperti ke-2
+
+💌💌sibling ==> "peer" --> contoh :
+	
+	 <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">
+		email tidak valid
+	</p> 
+==> p ini akan muncul jika tag input yang memiliki class dengan nama peer.
+==> jika inputnnya salah maka tag p ini akan muncul(visible). jika inputannya benar maka tag p ini akan hilang(invisible).
+
+💌💌dark-mode :
+
+ada 2 cara : 
+
+1. <body class="dark:bg-slate-700 text-white"> 
+==> ini akan mengikuti sistem operasi dari windows nya.
+
+2. menggunakan toggle :
+ 
+kita membuat div yang didalam nya ada tulisan light ditengah ada tag input dengan type checkbox yang di hidden yang diaktfkan dengan label yang di dalam label nya di beri style semacam toggle yang disebelah kanannya ada tulisan dark.
+
+untuk toggle :
+
+  <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+      	    </div>
+  </label> dengan style :
+
+<style type="text/tailwindcss">
+    #toggle:checked ~ label div.toggle-circle  {
+        @apply translate-x-3;
+    }
+</style>
+
+dengan javascript :
+
+<script>
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html');
+
+        checkbox.addEventListener('click', function() {
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        })
+</script>
+
+logika js :
+===> membuat const checkbox dan html untuk inisiallisasi.
+==> ketika checkbox nya active tambahkan class dark di html.
+==> jika tidak hapus class dark dari html.
+
+selesai (19/07/24 21:42).
+
+🙌 Part 7 :
+
+transform :
+
+klau kita ingin memuat transisi element bergerak maka kita buat parentnya(dibuat sebuah group) agar saat di hover tidak patah patah.
+
+transition :
+delay ==> contoh delay 1000 ==>  1 detik. saat kita meng-hover elemnt nya harus menunggu 1 detik untuk bergerak.
+
+animation :
+
+1. animate-spin ==> berputar terus. (contoh untuk membuat loading)
+2. animate-ping ==> fade-out
+3. animate-pulse
+4. animate bounce
+
+==> contoh untuk mengcustum animate :
+
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+
+                animation: {
+                    'spin-slow': 'spin 3s linear infinite'
+
+                }
+            },
+        },
+    }
+</script>
+
+contoh lagi jika ingin menambah keyframes :
+
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+
+               animation: {
+                    'spin-slow': 'spin 3s linear infinite',
+                    'goyang': 'wiggle 1s ease-in-out infinite'
+                },
+
+                keyframes: {
+                    wiggle: {
+                        '0%, 100%': {transform: 'rotate(-3deg)'},
+                        '50%':{transform: 'rotate(3deg)'}
+                    }
+                }
+
+            },
+        },
+    }
+</script>
+
+selesai.
+
+🙌 Part 8 :
+
+blom lengkap 
+
+menggunakan container bisa langsung responsive.
+
+💌💌💌absolute : contoh kita punya container yang di dalam nya ada element menggunakan posisi absolute. agar posisi absolute tidak keluar dari container, maka pada pada container tersebut kita beri posisi relative agar mengunci element absolute yang ada di dalam container itu sendiri.
+
+contoh penggunaan minus : 
+	
+	absolute -top-5 -right-5 ===> tanda ( - ) untuk minus nya di taruh di depan textnya atau ( -top-10 ) --> maka ini dibaca top - 10.
+
+cara membuat suatu element ke tengah menggunakan absolute di tailwind :
+
+	absolute top-0 left-1/2 -translate-x-1/2  ==> penjelasn (10:11 part-8).
+
+fixed itu nempel pada viewportnya tidak berpengaruh terhadap induk nya atau container.
+
+💌<html lang="en" class="scroll-smooth"> ===> class nya akan berguna saat kita membuat element dengan fungsi kembali ke atas dengan animasi yang smooth.
+
+🙌 Part 9 :
+
+Responsive design
+
+lihat documentasi / youtube WPU lumayan penting !.
+
+selesai 10:16
+
+
+penting !!! 14:00
+
+mobile first :
+secara default tailwind menggunakan break point mobile, disarankan kita mendesain untuk mobile dulu klo ada perubahan di layar lebih besar baru kita ubah setelahnya.
+pastikan di versi mobile nya udah bagus.
+
+
+PARt 10 :
+
+
+
+ 
+
+
+
+
+
+
+

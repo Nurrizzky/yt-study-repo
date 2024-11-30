@@ -1,0 +1,43 @@
+// .main {
+//     background-color: lightblue;
+
+//     .main-heading {
+//         font-size: 2em;
+//     }
+
+//     .main-paragraf {
+//         font-size: 1.4em;
+//     }
+// }
+
+// .main, footer {
+//     h1, p {
+//         letter-spacing: 1px;
+//     }
+// }
+
+
+// &
+// Parent selector 
+
+// .main {
+//     .container & {
+//         background-color: lightblue;
+//     }
+//     .main-heading {
+//         font-size: 2em;
+//     }
+
+//     &:hover {
+//         background-color: salmon;
+//     }
+// }
+
+.main {
+    & &-heading {
+        font-size: 2em;
+    }
+    & &-paragraf {
+        font-size: 1,4em;
+    }
+}

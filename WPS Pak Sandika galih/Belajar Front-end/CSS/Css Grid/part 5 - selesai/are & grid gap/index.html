@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gird- area & gap</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            'header header header'
+            'sidebar sidebar sidebar'
+            'content content content'
+            'footer footer footer';
+        }
+
+        .kotak {
+            width: 100%;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 180px;
+            box-sizing: border-box;
+        }  
+
+        /* .kotak:nth-child(even) {
+            background-color: beige;
+        } */
+
+        .header {
+            background-color: aqua;
+            grid-area: header;
+        }
+
+        .sidebar {
+            background-color: azure;
+            grid-area: sidebar;
+        }
+
+        .content {
+            background-color: cadetblue;
+            grid-area: content;
+        }
+
+        .footer {
+            background-color: brown;
+            grid-area: footer;
+        }
+
+        /* Responsive Breakpoint */
+
+        @media screen and (min-width: 956px) {
+            .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            'header header header'
+            'sidebar content content'
+            'sidebar content content'
+            'footer footer footer';
+        }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="kotak header">Header</div>
+    <div class="kotak sidebar">sidebar</div>
+    <div class="kotak content">content</div>
+    <div class="kotak footer">footer</div>
+</div>
+
+</body>
+</html>

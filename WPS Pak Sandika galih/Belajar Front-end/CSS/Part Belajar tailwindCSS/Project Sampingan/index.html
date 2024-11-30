@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CDN Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Favicon  -->
+    <link rel="icon" type="images/x-icon" href="img/Favicon.png" />
+
+    <!-- Link yang menyambungkan Ke CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Title -->
+    <title>Weather</title>
+  </head>
+  <body class="h-screen w-full bg-gradient-to-tl from-slate-900 via-slate-800 to-slate-700 font-Poppins">
+
+    <!-- Menu / Nav Control -->
+    <div class="flex w-full h-30 items-center justify-center">
+      <div class="w-[90%] h-[90%] backdrop-blur-xl bg-slate-500 bg-opacity-5 border-b-1 border-slate-500 border-opacity-20 flex items-center justify-between px-10 py-5 sticky top-0 rounded-lg shadow-md">
+        <div class="flex p-3 rounded hover:bg-slate-400 hover:backdrop-blur-md hover:bg-opacity-10 duration-200">
+          <div>
+            <img src="img/user.jpeg" alt="user" class="w-12 rounded-full mr-2" />
+          </div>
+          <div class="h-full w-full flex flex-col justify-center ml-3">
+            <p class="font-mediumbold text-sm">Muhammad Nur Rizky</p>
+            <p class="text-sm opacity-60 tracking-tight font-light">
+              Bogor, jawa barat, Indonesia
+            </p>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/okpkdogq1hnSYBKM7" class="p-4 hover:bg-slate-400 hover:backdrop-blur-md hover:bg-opacity-15 duration-200 relative rounded-lg">
+          <div class="h-full gap-5 flex flex-col items-center justify-between">
+            <div class="h-full gap-5 flex items-center justify-center">
+              <i class="fa-solid fa-location-dot fa-xl" style="color: #ffffff"></i>
+              <p class="text-sm">Bogor, Indonesia</p>
+            </div>
+            <div class="w-full h-[10%] border-b-2 absolute bottom-0"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    
+    <!-- Card -->
+    <!-- Container of All Card -->
+    <div class="max-w-[80%] h-[50%] flex items-center justify-around px-6 gap-4 font-Urbanist">
+      <div class="w-52 h-96 bg-gradient-to-b from-teal-800 via-teal-900 to-slate-800 backdrop-blur-lg bg-opacity-20 rounded-lg text-white text-opacity-75 shadow-xl  
+      hover:shadow-2xl 
+      hover:scale-105 
+      hover:bg-gradient-to-b hover:from-teal-900 hover:via-teal-800 hover:to-slate-900
+      hover:text-white
+      duration-300 group">
+        <div class="w-full h-full flex flex-col items-center justify-around text-center ">
+          <h1 class="w-[80%] font-bold text-lg border-b-2 border-slate-200 pb-3 group-hover:border-slate-950 shadow-md">Sunday</h1>
+          <i class="fa-solid fa-cloud-showers-water fa-5x"></i>
+          <div class="flex items-center -mb-10">
+            <i class="fa-solid fa-temperature-high fa-xl"></i>
+            <p class="text-md ml-2 font-semibold font-Poppins">19&deg;C</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-wind fa-xl"></i>
+            <p class="ml-2 text-md font-semibold">30km/h</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-52 h-96 bg-gradient-to-b from-teal-800 via-teal-900 to-slate-800   rounded-lg text-slate-200 hover:shadow-2xl 
+      hover:scale-105 
+      hover:bg-gradient-to-b hover:from-teal-900 hover:via-teal-800 hover:to-slate-900
+      hover:text-white
+      duration-300 group">
+        <div class="w-full h-full flex flex-col items-center justify-around text-center ">
+          <h1 class="w-[80%] font-bold text-lg border-b-2 border-slate-200 pb-3 group-hover:border-slate-950 shadow-md">Monday</h1>
+          <i class="fa-solid fa-cloud-bolt fa-5x"></i>
+          <div class="flex items-center -mb-10">
+            <i class="fa-solid fa-temperature-high fa-xl"></i>
+            <p class="text-md ml-2 font-semibold font-Poppins">18&deg;C</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-wind fa-xl"></i>
+            <p class="ml-2 text-md font-semibold">30km/h</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-52 h-96 bg-gradient-to-b from-teal-800 via-teal-900 to-slate-800   rounded-lg text-slate-200 hover:shadow-2xl 
+      hover:scale-105 
+      hover:bg-gradient-to-b hover:from-teal-900 hover:via-teal-800 hover:to-slate-900
+      hover:text-white
+      duration-300 group">
+        <div class="w-full h-full flex flex-col items-center justify-around text-center ">
+          <h1 class="w-[80%] font-bold text-lg border-b-2 border-slate-200 pb-3 group-hover:border-slate-950 shadow-md">Sunday</h1>
+          <i class="fa-solid fa-cloud fa-5x"></i>
+          <div class="flex items-center -mb-10">
+            <i class="fa-solid fa-temperature-high fa-xl"></i>
+            <p class="text-md ml-2 font-semibold font-Poppins">22&deg;C</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-wind fa-xl"></i>
+            <p class="ml-2 text-md font-semibold">30km/h</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-52 h-96 bg-gradient-to-b from-teal-800 via-teal-900 to-slate-800   rounded-lg text-slate-200 hover:shadow-2xl 
+      hover:scale-105 
+      hover:bg-gradient-to-b hover:from-teal-900 hover:via-teal-800 hover:to-slate-900
+      hover:text-white
+      duration-300 group">
+        <div class="w-full h-full flex flex-col items-center justify-around text-center ">
+          <h1 class="w-[80%] font-bold text-lg border-b-2 border-slate-200 pb-3 group-hover:border-slate-950 shadow-md">Sunday</h1>
+          <i class="fa-solid fa-sun fa-5x"></i>
+          <div class="flex items-center -mb-10">
+            <i class="fa-solid fa-temperature-high fa-xl"></i>
+            <p class="text-md ml-2 font-semibold font-Poppins">25&deg;C</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-wind fa-xl"></i>
+            <p class="ml-2 text-md font-semibold">30km/h</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-52 h-96 bg-gradient-to-b from-teal-800 via-teal-900 to-slate-800 rounded-lg text-slate-200 hover:shadow-2xl 
+      hover:scale-105 
+      hover:bg-gradient-to-b hover:from-teal-900 hover:via-teal-800 hover:to-slate-900
+      hover:text-white
+      duration-300 group">
+        <div class="w-full h-full flex flex-col items-center justify-around text-center ">
+          <h1 class="w-[80%] font-bold text-lg border-b-2 border-slate-200 pb-3 group-hover:border-slate-950 shadow-md">Sunday</h1>
+          <i class="fa-solid fa-cloud-sun fa-5x"></i>
+          <div class="flex items-center -mb-10">
+            <i class="fa-solid fa-temperature-high fa-xl"></i>
+            <p class="text-md ml-2 font-semibold font-Poppins">23&deg;C</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-wind fa-xl"></i>
+            <p class="ml-2 text-md font-semibold">30km/h</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-52 h-96 bg-gradient-to-b from-teal-800 via-teal-900 to-slate-800   rounded-lg text-slate-200 hover:shadow-2xl 
+      hover:scale-105 
+      hover:bg-gradient-to-b hover:from-teal-900 hover:via-teal-800 hover:to-slate-900
+      hover:text-white
+      duration-300 group">
+        <div class="w-full h-full flex flex-col items-center justify-around text-center ">
+          <h1 class="w-[80%] font-bold text-lg border-b-2 border-slate-200 pb-3 group-hover:border-slate-950 shadow-md">Sunday</h1>
+          <i class="fa-solid fa-cloud-moon-rain fa-5x"></i>
+          <div class="flex items-center -mb-10">
+            <i class="fa-solid fa-temperature-high fa-xl"></i>
+            <p class="text-md ml-2 font-semibold font-Poppins">18&deg;C</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-wind fa-xl"></i>
+            <p class="ml-2 text-md font-semibold">30km/h</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-52 h-96 bg-gradient-to-b from-teal-800 via-teal-900 to-slate-800  rounded-lg text-slate-200 hover:shadow-2xl 
+      hover:scale-105 
+      hover:bg-gradient-to-b hover:from-teal-900 hover:via-teal-800 hover:to-slate-900
+      hover:text-white
+      duration-300 group">
+        <div class="w-full h-full flex flex-col items-center justify-around text-center ">
+          <h1 class="w-[80%] font-bold text-lg border-b-2 border-slate-200 pb-3 group-hover:border-slate-950 shadow-md">Sunday</h1>
+          <i class="fa-solid fa-cloud-moon fa-5x"></i>
+          <div class="flex items-center -mb-10">
+            <i class="fa-solid fa-temperature-high fa-xl"></i>
+            <p class="text-md ml-2 font-semibold font-Poppins">19&deg;C</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-wind fa-xl"></i>
+            <p class="ml-2 text-md font-semibold">30km/h</p>
+          </div>
+        </div>
+    </div>
+
+    
+    
+
+    <!-- sideBar -->
+    <!-- <div class="max-h-96 mb-96">
+      <div class="relative w-96 h-56 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-lg p-6">
+      <div class="absolute inset-0 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg"></div>
+      <div class="relative z-10 text-white">
+        <h2 class="text-2xl font-bold mb-2">Gradient Card</h2>
+        <p class="text-lg">This card has a gradient background with backdrop blur effect.</p>
+      </div>
+    </div> -->
+
+    </div>
+    <!-- * Footer -->
+    <div>
+      <p class="font-Urbanist"></p>
+    </div>
+
+    <!-- <script>
+      let scrollTimeout;
+
+      function slowScroll(event) {
+        event.preventDefault();
+        let scrollSpeed = 60; // Ubah nilai ini untuk memperlambat atau mempercepat scroll
+        if (scrollTimeout) {
+          window.clearTimeout(scrollTimeout);
+        }
+        scrollTimeout = window.setTimeout(function () {
+          window.scrollBy({
+            top: event.deltaY < 0 ? -scrollSpeed : scrollSpeed,
+            behavior: "smooth",
+          });
+        }, 10);
+      }
+
+      window.addEventListener("wheel", slowScroll, { passive: false });
+    </script> -->
+  </body>
+</html>

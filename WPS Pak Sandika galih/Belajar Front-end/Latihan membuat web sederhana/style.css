@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: gray;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    background-color: lightskyblue;
+    border-bottom: 5px solid salmon;
+    z-index: 999;
+}
+
+.container {
+    width: 960px;
+    margin: 80px auto;
+    background-color: #fff;
+}
+
+.header { 
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.header .judul {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header ul li {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.header a {
+    text-decoration: none;
+    color: salmon;
+    padding: 3px;
+    font-family: sans-serif;
+}
+
+.header a:hover {
+    background-color: lightskyblue;
+    color: #fff;
+}
+
+.hero {
+    height: 300px;
+    background-image: url(img/1920x1080-1374100-shiba-samurai-warrior-digital-art-4k-pc-wallpaper.jpg);
+    background-size: cover;
+    background-position: 0 0;
+    border-bottom: 5px solid lightskyblue;
+    border-top: 5px solid salmon;
+}
+
+.main
+ {
+    padding: 20px;
+    width: 600px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.main
+ h2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main
+ .penulis {
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.main
+ .penulis a{
+    color: salmon;
+    text-decoration: none;
+}
+
+.main
+ p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.sidebar {
+    float: right;
+    width: 300px;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    font-weight: bold;
+    color: gray;
+}
+
+.sidebar img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 10px;
+}
+
+.sidebar p {
+    font : 12px/18px arial 
+}
+
+
+.footer {
+    background-color: #333;
+    padding: 10px;
+}
+
+.footer .copy {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+/* CLEAR FIX */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    zoom: 1;
+}

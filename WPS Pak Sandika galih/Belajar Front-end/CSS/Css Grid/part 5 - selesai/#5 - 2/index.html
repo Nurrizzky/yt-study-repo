@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            /* grid-template-rows: 
+            [baris1-mulai] 50px
+            [baris1-akhir baris1-akhir] 50px
+            [baris2-akhir];
+            grid-template-columns: 1fr 2fr 3fr;
+            grid-template-areas: 
+            'header header header'
+            'footer footer footer'; */
+            grid-template: 
+            [baris1-mulai]'header header header'50px  
+            [baris1-akhir baris2-mulai]'footer footer footer' 100px [baris2-akhir]
+            / 1fr 2fr 2fr;
+        }
+
+        .kotak {
+            width: 100%;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 180px;
+            box-sizing: border-box;
+        }  
+
+        .kotak:nth-child(even) {
+            background-color: beige;
+        }
+
+        /* Responsive Breakpoint */
+
+        /* @media screen and (min-width: 956px) {
+            .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            'header header header'
+            'sidebar content content'
+            'sidebar content content'
+            'footer footer footer';
+        }
+        } */
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="kotak ">1</div>
+    <div class="kotak ">2</div>
+    <div class="kotak ">3</div>
+    <div class="kotak ">4</div>
+    <div class="kotak ">5</div>
+    <div class="kotak ">6</div>
+</div>
+
+</body>
+</html>

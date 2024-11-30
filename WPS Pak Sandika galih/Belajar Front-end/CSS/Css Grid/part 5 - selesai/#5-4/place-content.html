@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gird Alignments justify-content</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #c34;
+            width: 80%;
+            height: 700px;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            grid-template-rows: 130px 130px 130px;
+            grid-template-columns: 80px 80px 80px;
+            gap: 10px;
+            /* place items short hand untuk menulis align items dan justify content dalam satu deklarasi */
+           place-content: space-around space-between;
+        } 
+
+        .items {
+            border: 3px solid #333;
+            width: 100px;
+            height: 50px;
+            background-color: aliceblue;
+        }
+
+        .items.i1,
+        .items.i4,
+        .items.i7 {
+            width: 130px;
+        }
+        .items.i2,
+        .items.i5,
+        .items.i8 {
+            width: 80px;
+        }
+        .items.i3,
+        .items.i6,
+        .items.i9 {
+            width: 170px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <div class="items i1">1</div>
+    <div class="items i2">2</div>
+    <div class="items i3">3</div>
+    <div class="items i4">4</div>
+    <div class="items i5">5</div>
+    <div class="items i6">6</div>
+    <div class="items i7">7</div>
+    <div class="items i8">8</div>
+    <div class="items i9">9</div>
+</div>
+
+</body>
+</html>
