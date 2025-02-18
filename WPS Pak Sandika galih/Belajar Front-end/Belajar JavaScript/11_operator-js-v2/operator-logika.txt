@@ -1,0 +1,23 @@
+Operator logika
+
+&&  --> hasilnya harus sama untuk mendapatkan true
+|| --> hasilnya harus ada 1 yang true maka hasilnya true
+! --> kebalikan nya misal hasilnya true maka akan jadi false
+
+bisa untuk membandingkan 2 konsidisi
+
+Operator string
+
+contoh :
+10 + "10" = "1010"
+10 + 10 + "10" = "2010"
+"10" + 10 + 10 = "101010"
+karena string pertama jadi seterusnya menjadi penjumlahan string
+
+Operator typeof untuk menemtukan tipe data dari sebuah nilai
+
+Operator konsidisional
+
+(kondisi) ? Benar : Salah
+kalo benar maka akan dikembalikan Benar jika salah akan Kembalikan Salah
+(x % 2 == 0) ? "genap" : "ganjil"

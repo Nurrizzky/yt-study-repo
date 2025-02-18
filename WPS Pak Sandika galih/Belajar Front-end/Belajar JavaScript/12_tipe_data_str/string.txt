@@ -1,0 +1,14 @@
+string
+
+jika di dalam teks ada '' maka untuk memulai dan menutup menggunakan ""
+namun jika di dalam teks ada "" menggunakan ''
+nah jika dalam teks ada kedua kutip tersebut maka menggunakan escape character
+\n digunakan untuk menambahkan baris baru(sama seperti Enter)
+\t maka akan menambah 1 buah tab 
+unicode untuk menampilkan sebuah simbol
+contoh unicode :
+'\u00a9' = simbol copyright
+
+Konkatinasi +
+kita bisa membandingkan dua buah string, huruf besar dan huruf kecil akan dianggap berbeda
+.length = untuk menghitung jumlah karakter dalam sebuah string juga menghitung sebuah spasi == "isi".length

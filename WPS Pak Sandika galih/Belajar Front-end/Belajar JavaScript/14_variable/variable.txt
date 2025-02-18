@@ -1,0 +1,20 @@
+Variabel
+
+sebagai tempat menampung sesuatu.
+
+Dekalarasi = mendaftarkan Variabel 
+inisialisasi = menyediakan memori untuk Variabel
+assigment = menetapkan nilai spesifik ke dalam Variabel
+
+var x;  --> Dekalarasi dan inisialisasi
+x = 20; --> assigment
+
+Aturan pembuatan Variabel :
+nama Variabel tidak boleh menggunakan spasi
+var 1a --> tidak boleh diawali nomor X
+var a1 --> boleh
+var ini_juga_boleh --> boleh, jika katanya lebih dari 1
+
+var namaVariabelIni --> ini disebut gaya penulisan CAMEL CASE
+
+Variabel Scope

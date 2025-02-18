@@ -1,0 +1,9 @@
+NILAI DAN TIPE DATA JAVASCRIPT
+Ada Beberapa Tipe Data Dalam JavaScript :
+1. String 
+2. Number 
+3. Boolean
+4. Function
+5. Undefined
+6. Object
+

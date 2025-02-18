@@ -1,0 +1,3 @@
+Boolean
+
+Adalah sebuah tipe data yang digunakan untuk mempresentasikan logika true atau false

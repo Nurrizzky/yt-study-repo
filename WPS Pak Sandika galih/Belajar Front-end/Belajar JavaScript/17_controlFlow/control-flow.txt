@@ -1,0 +1,13 @@
+control flow / Alur kendali
+
+normal flow
+program kita memiliki banyak statement,
+maka statement tersebut akan diekskusi dari atas ke bawah atau dari kiri ke kanan
+
+pengulangan dan perkondisian dapat mengatur flow kita.
+
+loop/iteration (pengulangan)
+misal statement sedang berjalan dari atas ke bawah,
+tiba tiba di tengah ada looping, maka alur nya akan terfocus pada pengulangan terlebih dahulu lalu lanjut lagi ke arah bawah
+
+perkondisian ada if..else / if..else if..else / switch

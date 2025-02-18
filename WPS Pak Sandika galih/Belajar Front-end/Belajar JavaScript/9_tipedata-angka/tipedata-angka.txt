@@ -1,0 +1,3 @@
+TIPE data NUMBER
+
+di dalam javascript tidak ada integer atau bilangan bulat adanya float
