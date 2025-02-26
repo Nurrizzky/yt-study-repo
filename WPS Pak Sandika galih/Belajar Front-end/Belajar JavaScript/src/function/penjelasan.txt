@@ -1,0 +1,182 @@
+Definisi function
+
+- Sebuah Program atau sub-routine yang dapat "dipanggil" di bagian lain pada Program
+- Merupakan struktur dasar pembentuk javascript
+- Disebut juga sebagai sebuah prosedur (kumpulan statement untuk melakukan tugas atau menghitung sebuah nilai);
+- Untuk dapat menggunakannya, kita harus 'membuat' terlebih dahulu function tersebut, lalu 'memanggilnya'
+- Termasuk kedalam First-Class Object
+
+Kenapa function ?
+- Reusability (DRY: do not Reapet yourself)
+   -> kita gaperlu menulis code yang sama, kita hanya perlu membuat block program yang nanti bisa di panggil berulang ulang(function).
+- Dekomposisi / Abstarksi
+   -> 
+- Modulatitas 
+   -> untuk menyembunyikan kompleksifitas codenya. agar kita juga gampang untuk men-solve error pada saat debugging.
+
+Kategori function
+- Build-in function 
+   -> adalah function yang sudah dibuatkan oleh javascript.
+   -> cara pakai nya kita tinggal panggil saja.
+      -> contoh : alert(), confirm(), prompt(), dan masih banyakk lagi.
+      -> contoh(func.string): charAt(), slice(), split(), toString(), toUpperCase(), toLowercase().
+      -> contoh(func.math): sin(), cos(), tan(), random().
+- User-define function 
+   -> adalah function yang dibuat oleh kita sendiri.
+   -> cara membuatnya menggunakan keyword function, nama function(optional), parameter/argumen/bahan-baku yang bisa digunakan dalam function
+      -> perameter: disimpan dalam (), boleh ada dan boleh lebih dari 1(,), boleh juga tidak.
+   -> function body dibungkus dengan {}
+   -> dapat mengembalikan nilai (return value) atau tidak
+   -> caranya ada 2: 
+      - dengan deklarasi(function declaration), 
+      - expressi(function expression).
+   - contoh function declaration :
+   function penjumlahan(a, b) {
+      let total;
+      total = a + b;
+      return total;
+   }
+
+   parameter bisa disebut bahan baku untuk pembuatan function tersebut
+
+   - contoh function expression :
+   const penjumlahan = function(a, b) {
+      let total;
+      total = a + b;
+      return total;
+   }
+   - cara memanggil / menjalankan function:
+      console.log(penjumlahan(1, 2));
+      console.log(penjumlahan(100, 200));
+      console.log(penjumlahan(900, 100));
+
+
+
+
+
+part 28 :
+
+
+function :
+- block code yang dibuat untuk tugas spesifik
+- dapat dipanggil berulang kali
+- memudahkan penulusuran
+- Reusability
+
+beri nama function yang jelas, sesuai dengan apa yang dikerjakan di function tersebut
+
+penjelasan penulisan function : 
+
+function --> untuk memberi tahu interpeter javascript bahwa kita akan menulis function 
+{
+
+} --> gunakan kurung kurawal untuk menandai awal dan akhir dari sebuah function
+
+function jumlahVolumeDuaKubus() {} --> memberi nama function untuk menjelaskan apa yang dilakukan
+() --> selalu tulis kurung untuk parameter/bahan baku yang akan digunakan
+
+() -> parameter :
+parameter akan diisi dari data yang dikirim dari luar, untuk digunakan pada function-nya
+parameter boleh kosong atau pun ada isinya
+jika ada isinya boleh diisi sebanyak mungkin, sesuai dengan kebutuhan
+tapi jika tidak ada isinya kurung nya harus tetap ada.
+dan anggap isi dari parameter ini khusus untuk functionnya itu sendiri
+
+return : 
+sebuah function biasanya mengembalikan sebuah nilai
+dengan setelah return ini menandakan berakhirnya sebuah code / code akan berhenti di kerjakan 
+cara menggunakan-nya setelah keyword return kita tulis nilai yang akan di kembalikan
+Fungsinya: kita memberitahu interpreter bahwa kita sudah menyelesaikan code nya dan ini hasilnya.
+
+
+part 29:
+
+Parameter
+Parameter adalah sebuah variabel yang terletak pada tanda kurung sebuah function.
+yang digunakan untuk menyimpan sebuah nilai dari saat function dipanggil.
+
+Argumen 
+adalah nilai yang dikirim ke parameter saat function dipanggil.
+
+pertanyaan:
+1. bagaimana jika argumen nya ada 3 tapi parameter hanya 2 ?
+jawabannya argumen yang lebih 1 akan diabaikan.
+
+2. bagaimana jika parameter nya lebih banyak dari argumen,
+   misalnya parameter 3 argumen 2.
+jawabannya parameter yang tidak memiliki nilai / parameter ke 3 dari argumen akan diisi oleh undefined
+
+di javascript ada variabel khusus yaitu : arguments
+arguments = adalah sebuah variabel atau secara Definisi array yang berisi nilai yang dikirim saat fungsi dipanggil
+atau disebut sudo variabel bentuknya array / variabel semu = variabel yang kayanya gakeliatan tapi ada
+
+
+part 30 :
+
+adalah proses mengubah code agar menjadi lebih 'baik' lagi tanpa mengubah Fungsinya
+kenapa ?
+1. readability, mudah dibaca oleh orang lain.
+2. do not Reapet yourself
+3. testability, agar mudah saat nanti dilakukan pengetesan
+4. performance, bagaimana kita menulis code yang dapat meningkatkan performa dari code nya.
+5. maintence, mudah dikelola
+
+
+part 31:
+
+SCOPE
+lingkup variabel / bagaimana sebuah variabel dapat diakses di code kita
+
+ada bahasa pemrograman yang memiliki block scope dan function scope
+block scope contohnya pada {  } jadi variabelnya hanya bisa digunakan pada blockcode tersebut saja
+< selebihnya di script.js >
+
+
+part 32 :
+
+REKURSIF
+adalah sebuah fungsi yang memanggil dirinya sendiri
+
+input -> FUNCTION -> Output
+^gambaran sebuah function
+
+input -> FUNCTION(ada FUNCTION di dalamnya yang memanggil dirinya sendiri) -> Output
+^^ ini adalah gambaran REKURSIF
+
+saat menggunakan REKURSIF ini fungsi nya harus berakhir dan menghasilkan nilai, karena jika tidak dapat terjadi looping terus menerus.
+
+kondisi akhir dari REKURSIF disebut base case yang akan menghasilkan sebuah nilai
+dalam percobaan di sini, base case menggunakan if. yaitu kondisi dimana n sama dengan berapa maka return / stop bagian functionnya
+
+implementasi REKURSIF
+- menggantikan looping
+- membuat fibonacci
+- pencarian dan penelusuran pada struktur data list dan tree 
+- bahasa yang tidak memiliki looping
+
+
+
+part 33 terakhir bahas function:
+
+deklarasi vs expressi
+
+cara penulisan :
+declaration : 
+function identitas (parameterlist (optional)) { function body }
+expression:
+function identitas(optional) (parameterlist(optional)) { function body }
+
+function declaration :
+- lebih flexibel (dapat di tulis dimana saja)
+   - contohnya kita memberikan nilai terlebih dahulu ke parameter, 
+   baru kita deklarasikan functionnya dibawahnya.
+   - ini karena konsep hoisting.
+- mudah dipahami pemula.
+
+function expression :
+- harus didefinisikan dulu sebelum dipanggil
+- lebih powerfull
+   - sebagai closure
+   - sebagai argumen untuk function lain
+   - IIFE (Immedietly Invoced Funtion expression)
+

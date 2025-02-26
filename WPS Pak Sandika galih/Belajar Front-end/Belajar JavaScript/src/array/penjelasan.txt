@@ -1,0 +1,165 @@
+Array
+
+Dalam beberapa bahasa programming array ada yang dijadikan sebagai tipe data dan ada juga yang dijadikan struktur data.
+Array secara umum = sususan sistematis dari objek serupa;
+Array secara programming :
+Array adalah tipe data untuk mendeskripsikan kumpulan element(nilai atau variabel),
+nah tiap element Memiliki index.
+
+nah untuk cara penulisannya seperti ini :
+let hari = ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'];
+nah javascript dapat mengenali array karena menggunakan []
+jadi variabel hari ini menampul array.
+
+kenapa array ?
+- memudahkan pengelolaan data atau nilai.
+- management memory  
+
+Array :
+- Array adalah variabel jamak, yang mempunyai banyak element dan diacu dengan nama yang sama.
+- Kumpulan pasangan key & value,
+- key itu index pada array yang ber-tipe data integer yang dimulai dari 0.
+- Array pada javascript bertipe data objek.
+- Array pada javascript Memiliki fungsi / method length untuk menghitung isi di dalamnya. 
+   - untuk length menghitung jumlah array dari 1. misalnya hari karena ada 7 maka hasilnya 7.
+- element pada array boleh memiliki tipe data yang berbeda.
+
+Key & value pair
+key di array adalah bagian indexnya
+
+yang bisa dimasukan ke dalam array macam macam yaitu :
+- string
+- integer
+- boolean
+- bahkan kita bisa memanggil function ke array
+- dan kita pun bisa membuat array di dalam array.
+   - array dalam array disebut : array multidimensi.
+   - cara pemanggilannya memanggil array yang paling luar dahulu[1] lalu ke dalam array yang di dalam [1] jadinya variabel[1][1]
+
+
+Part 35 :
+
+Manipulasi array
+
+-- cara ini masih manual
+
+- Menambahkan
+untuk menambahkan array kita bisa tulis seperti berikut:
+let hari = ['senin','selasa','rabu','dll'];
+atau pun kita bisa mengisinya sesudah di inisialisasi , misal :
+let hari = [];
+hari[0] = 'senin',
+hari[1] = 'selasa',
+untuk cara berikut kita harus memberikan value satu per satu ke dalam variabel yang menampung array secara manual.
+dan untuk pengisiannya kita harus membuat sesuai dengan index yang akan diiisi.
+
+- Menghapus 
+hari[1] = undefined;
+kita bisa membuat array yang sudah ada dihapus atau dihilangkan dengan cara seperti menimpa value sebelumnya dengan 'undefined'.
+
+- Menampilkan
+untuk menampilkan array secara manual, dan cara ini tidak efisien tetapi in hanya untuk melihatkan bagaimana cara / alur dari menampilkan sebauh array.
+
+untuk menampilkannya kita menggunakan for loop.
+contoh penulisannya :
+for(let index = 0; index < hari.length; index++) {
+   console.log(hari[index]);
+}
+kita membuat variabel yang akan di looping sesuai dengan jumlah index yang dimiliki oleh variabel hari, lalu menampilkan array satu per satu sesuai dengan index nya berapa.
+
+-- Array method
+
+Method array yang dipakai dalam pembelajaran ini ada :
+- length - splice - unshift   - filter
+- join   - push   - foreach   - find
+- pop    - shift  - map
+
+- join 
+menggabungkan atau menampilkan semua element di index dan parameter pada join funsginya untuk memberikan separator per index element nya.
+penulisan hari.join(' '); 
+
+- push
+untuk menambahkan element ke dalam array di bagian terakhir dari array.
+penulisan : hari.push('element');
+
+- pop
+untuk menghapus element terakhir dalam array.
+penulisan : hari.pop();
+
+- unshift
+fungsinya sama seperti push, tetapi ini menambahkan element pada index pertama atau bagian paling awal arraynya.
+penulisan : hari.unshift('element);
+
+- shift
+untuk menghapus element paling awal dari array nya.
+
+
+
+part 36 :
+
+- splice
+fungsinya untuk menambah sekaligus bisa menghapus.
+rumusnya :
+splice(indexAwal, mauDihapusBerapa, elementBaru1, elementBaru2);
+pilih index ke berapa -> jumlah yang mau dihapus setelah index yang dipilih -> tambahkan elemnt baru ke array.
+
+- slice 
+fungsinya mengambil elemnt dari array.
+rumusnya :
+slice(awal, akhir);
+nah untuk bagian akhir tidak dihapus,contoh nya slice(1, 3) maka yang terhapus 1 dan 2 saja.
+nah untuk array slice ini kita harus menyimpan hasilnya ke sebuah variabel untuk ditampilkan.
+
+
+
+part 37:
+
+- forEach
+fungsinya untuk menampilkan setiap element array, seperti for namun lebih simple.
+ini tidak mengembalikan ke array lagi.
+forEach = untuk setiap.
+cara penulisan: 
+array.forEach(function(element){
+   console.log(element);
+});
+untuk setiap element pada array lakukan fungsi ini.
+
+- map
+fungsinya sama seperti forEach namun map mengembalikan array.
+cara penulisan :
+let newArray = array.map(function(element){
+   return element;
+});
+
+- sort 
+fungsinya untuk mengurutkan dari yang terkecil.
+penulisan : 
+array.sort();
+atau
+array.sort(function(a,b){
+   return a-b;
+});
+
+
+
+part 38
+
+- filter 
+fungsinya untuk memfilter array, misalnya kita bisa mencari element yang lebih besar dari 5 (.. > 5).
+ini mengembalikan hasil yang ter filter saja, dan dalam bentuk array.
+penulisan :
+let newFilter = filter.filter(function(element){
+   return element > 5;
+})
+maka yang tampil adalah angka yang lebih besar dari 5, dan bisa lebih dari 1.
+
+- find
+fungsinya sama seperti filter namun hanya mengembalikan 1 element atau nilai.
+let newFind = find.find(function(element){
+   return element > 5;
+})
+maka yang keluar adalah element yang lebih besar dari 5 misal nya ada 5, 6, 7, 8, ...
+nah yang keluar hanya angka 6.
+
+
+

@@ -1,0 +1,107 @@
+Object
+
+
+part 41:
+
+Object adalah kumpulan nilai, yang mempunyai nama.
+"object adalah array yang lebih sakti" - Pak Sandika. 
+bisa melakukan yang dilakukan array bahkan lebih komplex
+
+kenapa object ?
+karena memudahkan mengelola data yang banyak.
+
+anatomi object
+var siswa = {
+   nama : "rizky",
+   umur : 16,
+   rombel : "PPLG XI-5"
+   data : function () {
+      return "nama nya adalah" + this.nama;
+   }
+}
+
+varibel siswa bertipe object.
+nama, umur, rombel. adalah sebuah varibel yang ada di dalam object.
+nama, umur, rombel dan isinya disebut sebagai PROPERTI.
+
+kita juga bisa membuat function di dalam object.
+function yang ada di dalam object disebut METHOD.
+
+
+kita bisa memberikan PROPERTI pada object kosong langsung.
+caranya :
+let siswa = {};
+siswa.nama = "rizky";
+maka jika kita menampilkan variabel siswa, siswa akan memiliki PROPERTI nama: "rizky".
+
+untuk mengambil nilai dari PROPERTI kita bisa memanggil varibel dan gunakan titik lalu ketik variabel objectnya,
+atau kita bisa menggunakan kurung siku [].
+contoh nya :
+   - menggunakan titik :
+   siswa.nama;
+   - menggunakan kurung siku [] :
+   siswa["nama"];
+
+
+
+
+
+part 42 :
+
+cara membuat object :
+- object literal (seperti part di intro).
+- function declaration.
+- constructer function (keyword new) (yang akan banyak digunakan).
+- Object.create().
+
+apa perbedaannya ?
+
+- Literal 
+let namaObject = {};
+contoh lengkap nya ada di part 41.
+
+
+- Function declaration
+function namaFunction(value1, value2, value3) {
+   let namaObject = {};
+   namaObject.key1 = value1;
+   namaObject.key2 = value2;
+   namaObject.key3 = value3;
+   return namaObject;
+}
+namaFunction(value1, value2, value3);
+
+
+- Constructor 
+function namaFunction(value1, value2, value3){
+   this.key1 = value1;
+   this.key2 = value2;
+   this.key3 = value3;
+}
+
+let variabel = new namaFunction(value1, value2, value3);
+
+perbedaan antara declaration dan constructer :
+declaration :
+- harus ada variabel yang bertipe object.
+- harus me-return variabel tersebut.
+- tidak harus menggunakan keyword 'new' pada saat pemanggilan function.
+- seperti membuat function biasa.
+
+constructor :
+- huruf awal nama function kapital (hanya untuk membedakan dengan function biasa).
+- tidak perlu membuat variabel bertipe object.
+- membuat key mengarah ke 'this.key' dan value diambil dari paramter yang sudah terisi oleh argumen.
+- saat dipanggil harus menggunakan keyword 'new' lalu namaFunction().
+
+intinya jika kita menggunakan constructor kita harus menggunakan keyword 'new' 
+
+
+
+part 43 :
+
+this
+
+'this' sebuah keyword special yang didefinisikan di setiap function
+isi dari this adalah window.
+window adaah object global.
